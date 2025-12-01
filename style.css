@@ -1,0 +1,332 @@
+/* =======================================
+   🌟 Modern Professional Form Styling
+   Clean • Minimal • SaaS UI • Glass Card
+   ======================================= */
+
+:root {
+  --bg: #f0f4f8;
+  --card: #ffffff;
+  --accent: #1e5bff;        /* Blue-600 */
+  --accent-light: #dbeafe;  /* Blue-100 */
+  --muted: #6b7280;
+  --text-dark: #1f2937;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0,0,0,0.06);
+  --transition: 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(180deg, #e8eef5, #fafdff);
+  color: var(--text-dark);
+  padding: 2.5rem;
+  letter-spacing: 0.2px;
+}
+
+/* ---------------------------------------
+   Main Container
+---------------------------------------- */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------
+   Heading
+---------------------------------------- */
+h1 {
+    color: #1e3a8a;     /* Darker Blue */
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------------------------------------
+   Form Card
+---------------------------------------- */
+/* ---------------------------------------
+   Form Card (Updated Color)
+---------------------------------------- */
+.form {
+  background: #fafcff !important;   /* SAME as Skills, Gender, Address blocks */
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1.2rem;
+  animation: fadeIn 0.4s ease;
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------
+   Grid Layout
+---------------------------------------- */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ---------------------------------------
+   Labels
+---------------------------------------- */
+label {
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ---------------------------------------
+   Inputs / Select / Textarea
+---------------------------------------- */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  background: #fff;
+  transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-light);
+  outline: none;
+}
+
+/* ---------------------------------------
+   Fieldset (Gender • Skills)
+---------------------------------------- */
+.fieldset {
+  border: 1px dashed #d8dee9;
+  padding: 1rem;
+  border-radius: var(--radius);
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.fieldset legend {
+  font-weight: 700;
+  padding: 0 6px;
+  color: var(--accent);
+}
+
+/* ---------------------------------------
+   Buttons
+---------------------------------------- */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+button {
+  padding: 0.65rem 1.2rem;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+/* Submit Button */
+#submitBtn {
+  background: var(--accent);
+  color: white;
+}
+
+#submitBtn:hover {
+  background: #1d4ed8;
+}
+
+/* Reset Button */
+#resetBtn {
+  background: #eef2ff;
+  color: var(--accent);
+}
+
+#resetBtn:hover {
+  background: #e0e7ff;
+}
+
+/* ---------------------------------------
+   Result Section
+---------------------------------------- */
+.result {
+  margin-top: 2rem;
+  padding: 1.8rem;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Profile Card Layout */
+.profile-card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.4rem;
+}
+
+/* Avatar */
+.avatar {
+  width: 140px;
+  height: 140px;
+  background: var(--accent-light);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Name + Email Section */
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Tags (Skills) */
+.kv span {
+  background: #f3f4f6;
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  margin-right: 0.4rem;
+}
+
+/* Bio Section */
+.bio {
+  margin-top: 0.8rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+/* Hidden Utility */
+.hidden {
+  display: none;
+}
+
+/* ---------------------------------------
+   Mobile Responsive
+---------------------------------------- */
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .profile-card {
+    grid-template-columns: 1fr;
+  }
+  .avatar {
+    margin: 0 auto;
+  }
+}
+/* Blue headers and labels */
+h1 {
+    color: #1e5bff;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Form label styling */
+.form-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e5bff;   /* blue */
+    margin-top: 1rem;
+    display: block;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #d9e2f1;
+    border-radius: 10px;
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    background: #f8fbff;
+    transition: 0.2s;
+}
+
+/* Focus effect */
+.form-input:focus {
+    border-color: #1e5bff;
+    box-shadow: 0 0 0 3px rgba(30, 91, 255, 0.15);
+    outline: none;
+}
+
+/* Gender + Skills sections */
+.fieldset {
+    border: 1px dashed #d2d9e5;
+    padding: 1rem;
+    border-radius: 10px;
+    background: #fafcff;
+    margin-top: 1.2rem;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1e5bff;
+}
+
+/* Make text slightly bold */
+label, span, option {
+    font-weight: 500;
+}label {
+    font-size: 1.05rem;
+    font-weight: 650;
+    color: #1e40af !important;   /* Dark Blue */
+}
+h1 {
+    color: #1e40af !important;   /* same dark blue as your labels */
+    font-weight: 700;
+}
+/* Make Gender & Skills background match other white blocks */
+.fieldset {
+    background: #ffffff !important;   /* PURE white */
+    border: 1px solid #e5e7eb;        /* Light border like other boxes */
+    padding: 1.2rem;
+    border-radius: 12px;
+}
+
+
+
